@@ -3,8 +3,8 @@
 # See https://docs.fly.io/reference/configuration for information about how to use this file.
 #
 
-app = 'argvxxxxx'
-primary_region = 'ams'
+app = 'my-rvg-app'
+primary_region = 'lhr'
 
 [build]
 [http_service]
@@ -21,5 +21,5 @@ primary_region = 'ams'
   cpus = 1
   memory_mb = 256
   [mounts]
-  source = "rvg_data"
+  source = "rvg_data_lhr"
   destination = "/data"
