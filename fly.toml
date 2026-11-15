@@ -1,12 +1,16 @@
-# fly.toml app configuration file generated for argvxxxxx on 2026-11-13T18:28:26Z
+# fly.toml app configuration file generated for argvcccc on 2026-11-15T13:08:48Z
 #
 # See https://docs.fly.io/reference/configuration for information about how to use this file.
 #
 
-app = 'my-rvg-app'
+app = 'argvcccc'
 primary_region = 'lhr'
 
 [build]
+[[mounts]]
+  source = 'rvg_data_lhr'
+  destination = '/data'
+
 [http_service]
   internal_port = 8080
   force_https = true
@@ -20,6 +24,3 @@ primary_region = 'lhr'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 256
-  [mounts]
-  source = "rvg_data_lhr"
-  destination = "/data"
